@@ -514,6 +514,79 @@
       transform: scaleX(1);
     }
 
+    /* ── HOBBIES & INTERESTS ── */
+    .hobbies-section {
+      background: var(--dark);
+      text-align: center;
+    }
+
+    .hobbies-section h2 {
+      display: block;
+    }
+
+    .hobbies-section h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .hobbies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .hobby-card {
+      background: var(--dark2);
+      padding: 30px;
+      border: 1px solid #222;
+      transition: all 0.3s ease;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hobby-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.4s ease;
+    }
+
+    .hobby-card:hover::before {
+      width: 100%;
+    }
+
+    .hobby-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+      background: #202020;
+    }
+
+    .hobby-icon {
+      font-size: 24px;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .hobby-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .hobby-card p {
+      font-size: 12px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
     /* ── CONTACT ── */
     .contact-section {
       background: var(--black);
@@ -739,6 +812,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -859,6 +933,11 @@
     <h2 class="fade-in">Experience</h2>
     <div class="timeline">
       <div class="timeline-item fade-in">
+        <div class="timeline-category">Modeling &amp; Fashion</div>
+        <h3>Professional Model — Shoots &amp; Fashion Shows</h3>
+        <p>Active freelance model executing professional fashion shoots, brand campaigns, catalog shoots, and runway fashion shows. Versatile in styling, commercial presenting, and collaborative creative projects.</p>
+      </div>
+      <div class="timeline-item fade-in">
         <div class="timeline-category">Corporate &amp; Tech Events</div>
         <h3>Event Crew — IIT Bombay Fest</h3>
         <p>Managed crowd logistics, guest interactions, and support operations at one of India's most prestigious
@@ -902,6 +981,35 @@
       <div class="lang-pill">Marathi</div>
       <div class="lang-pill">Marwadi</div>
       <div class="lang-pill">Gujarati</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- HOBBIES & INTERESTS -->
+  <section id="hobbies" class="hobbies-section">
+    <h2 class="fade-in">Hobbies &amp; Interests</h2>
+    <div class="hobbies-grid fade-in">
+      <div class="hobby-card">
+        <div class="hobby-icon">✦</div>
+        <h3>Fashion Styling</h3>
+        <p>Curating unique aesthetics, styling editorial outfits, and matching colors and trends for high-end fashion shoots.</p>
+      </div>
+      <div class="hobby-card">
+        <div class="hobby-icon">◈</div>
+        <h3>Fitness &amp; Yoga</h3>
+        <p>Maintaining poise, posture, endurance, and healthy physical discipline required for professional runway modeling.</p>
+      </div>
+      <div class="hobby-card">
+        <div class="hobby-icon">◇</div>
+        <h3>Travel &amp; Blogging</h3>
+        <p>Exploring diverse cultural hubs and locations, networking with industry professionals on the go.</p>
+      </div>
+      <div class="hobby-card">
+        <div class="hobby-icon">▲</div>
+        <h3>Camera Angles &amp; Art</h3>
+        <p>Studying studio lighting, photography compositions, and artistic expressions to enhance modeling dynamics.</p>
+      </div>
     </div>
   </section>
 
